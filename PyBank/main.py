@@ -23,7 +23,7 @@ print("The total number of months included in the dataset is", rowcount-1)
 budget_data.close()
 
 import csv
-file = open(r'c:/Users/Ina/Documents/GitHub/python-challenge/PyBank/Resources/budget_data.csv')
+file = open(r'./Resources/budget_data.csv')
 csvreader = csv.reader(file)
 header = next(csvreader)
 print(header)
@@ -39,7 +39,6 @@ PnlChanges = []
 
 for row in csvreader:
     rows.append(row)
-    # print(row[-1])
     Pnl+= int(row[-1])
     PnlList.append(row[-1])
     PnlTotal = PnlTotal + int(row[-1])

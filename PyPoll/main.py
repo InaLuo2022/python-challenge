@@ -5,7 +5,7 @@
 
 # Read file 'election_data.csv'
 import csv
-file = open(r'c:/Users/Ina/Documents/GitHub/python-challenge/PyPoll/Resources/election_data.csv')
+file = open(r'./Resources/election_data.csv')
 csvreader = csv.reader(file)
 header = next(csvreader)
 
@@ -21,7 +21,7 @@ for row in csvreader:
 
 # Create a complete list of candidates who received votes
 CandidateCounter = 0
-CandidateCounters = []      # 
+CandidateCounters = []   
 Candidate = 0
 CandidateList = [Candidates[Candidate]]
 CandidatePercentage = 0
@@ -62,7 +62,7 @@ for z in range(len(CandidateCounters)):
         # print(CandidateList[z])
         winner = CandidateList[z]
 
-with open("PyPoll.txt", "w") as text:
+with open("./analysis/PyPoll.txt", "w") as text:
     text.write('Election Results')
     text.write('\n')
     text.write('-----------------------------')

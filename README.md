@@ -2,6 +2,7 @@
 The python-challenge will include two folders PyBank & PyPoll.
 
 PyBank: 
+------------------------------------------------------------------------------------------------------------------------------------
 The python script is to analyze the financial records in 'budget_data.csv' for the following values:
     1. The total number of months included in the dataset
     2. The net total amount of "Profit/Losses" over the entire period
@@ -10,6 +11,7 @@ The python script is to analyze the financial records in 'budget_data.csv' for t
 The final financial analysis is located in '.analysis/budget_data.txt'
 
 PyPoll:
+-------------------------------------------------------------------------------------------------------------------------------------
 The PyPoll 'election_data.csv' is about a small, rural U.S. town vote data with three columns: "Voter ID", "County", and "Candidate". 
 The Python script is created to analyze the votes database and calculate each of the following values:
     1. The total number of votes cast
@@ -20,6 +22,7 @@ The Python script is created to analyze the votes database and calculate each of
 The result is located in the subfolder of 'analysis/PyPoll.txt'
 
 Brief instructions to run these python scripts mentioned above.
+-------------------------------------------------------------------------------------------------------------------------------------
     a. Open the folder of PyBank or PyPoll in the Visual Studio Code
     b. Click main.py and run
     c. The analysis result will generate directly as a text file in the subfolder of the analysis

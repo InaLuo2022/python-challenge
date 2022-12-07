@@ -34,8 +34,6 @@ Candidates.sort()
 for Candidate in range(len(Candidates)-1):
     if Candidates[Candidate] != Candidates[Candidate + 1]:
         CandidateList.append(Candidates[Candidate+1])
-       
-print(str(CandidateList))
 
 # Calculate a total candidates for each candidate category
 for x in range(len(CandidateList)):
@@ -45,23 +43,30 @@ for x in range(len(CandidateList)):
             CandidateCounter+=1
     CandidateCounters.append(CandidateCounter)
 
-print(CandidateCounters)
-
 # The percentage of votes each candidate won
 for y in range(len(CandidateCounters)):
     CandidatePercentage = round(CandidateCounters[y] / sum(CandidateCounters) * 100, 2)
     CandidatePercentages.append(CandidatePercentage)
-print(CandidatePercentages)
 
 # The winner of the election based on popular vote
 WinnerCounter = max(CandidateCounters)
-# print(WinnerCounter)
 
 for z in range(len(CandidateCounters)):
     if CandidateCounters[z] == WinnerCounter:
-        # print(CandidateList[z])
         winner = CandidateList[z]
 
+# Analysis result in terminal
+print('Election Results')
+print('-----------------------------')
+print(f"Total Votes: {rowcount}")
+for i in range(len(CandidateCounters)):
+    print(f"{CandidateList[i]}:{CandidatePercentages[i]}% ({CandidateCounters[i]})")
+
+print('-----------------------------')
+print(f"Winner: {winner}")
+print('-----------------------------')
+
+# Write analysis result into PyPoll.txt
 with open("./analysis/PyPoll.txt", "w") as text:
     text.write('Election Results')
     text.write('\n')
